@@ -4,55 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="sign-up.component.css" rel="stylesheet" type="text/css" />
+    <title>Login</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="displayTable">
-        <div class="displayTableCell">
-
-            <div class="authBlock">
-                <h3>Sign Up</h3>
-
-                <div class="formGroup">
-                    <input type="email" class="formControl" placeholder="Email Address" #userEmail required>
-                </div>
-
-                <div class="formGroup">
-                    <input type="password" class="formControl" placeholder="Password" #userPwd required>
-                </div>
-
-                <div class="formGroup">
-                    <input type="button" class="btn btnPrimary" value="Sign Up"
-                        (click)="authService.SignUp(userEmail.value, userPwd.value)">
-                </div>
-
-                <div class="formGroup">
-                    <span class="or"><span class="orInner">Or</span></span>
-                </div>
-
-                <!-- Continue with Google -->
-                <div class="formGroup">
-                    <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
-                        <i class="fab fa-google-plus-g"></i>
-                        Continue with Google
-                    </button>
-                </div>
-
-                <!-- Continue with Facebook -->
-                <div class="formGroup">
-                    <button type="button" class="btn facebookBtn" (click)="authService.FacebookAuth()">
-                        <i class="fab fa-facebook"></i>
-                        Continue with Facebook
-                    </button>
-                </div>
-            </div>
-
-            <div class="redirectToLogin">
-                <span>Already have an account? <span class="redirect" routerLink="/sign-in">Log In</span></span>
+    <div class="authBlock">
+        <header>
+            <h1 style="color: #000000; padding: 5px; margin-top: 20px;">SIGN UP PAGE</h1>
+        </header>
+        <div class="box">
+            <div class="boxAfter">
+                <form action="registerExperience.html">
+                    <h1>Sign Up</h1>
+                    <br /><br /><br />
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <input type="email" class="form-control" name="id" id="inputEmail3" placeholder="Email"
+                                #userEmail required />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <input type="password" class="form-control" name="pass" id="inputPassword3"
+                                placeholder="Password" #userPwd required />
+                        </div>
+                    </div>
+                    <br /><br />
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <button type="submit"
+                                style="width: 100%; background-color: #242625; border-color:#242625; font-weight: bold; margin-top: -80px;"
+                                class="btn btn-primary" (click)="authService.SignUp(userEmail.value, userPwd.value)">
+                                Sign Up
+                            </button>
+                        </div>
+                        <div class="col-sm-12">
+                            <button type="button" class="btn googleBtn"
+                                style="width: 100%; background-color: #ea4335; font-weight: bold; color: #ffffff; margin-top: -45px;"
+                                (click)="authService.GoogleAuth()">
+                                <i class="fab fa-google-plus-g"></i>
+                                Log in with Google
+                            </button>
+                        </div>
+                        <div class="col-sm-12">
+                            <button type="button" class="btn facebookBtn"
+                                style="width: 100%; background-color: #4267b2; font-weight: bold; color: #ffffff; margin-top: -10px;"
+                                (click)="authService.FacebookAuth()">
+                                <i class="fab fa-facebook"></i>
+                                Log in with Facebook
+                            </button>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="redirectToLogin" style="margin-top: 5px;">
+                                <span>Already have an account?<span class="redirect" routerLink="/sign-in"> Sign
+                                        In</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
-
     </div>
 </body>
 

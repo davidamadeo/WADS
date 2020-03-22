@@ -4,49 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <div class="displayTable">
-        <div class="displayTableCell">
-            <div class="authBlock">
-                <h3>Sign In</h3>
-                <div class="formGroup">
-                    <input type="text" class="formControl" placeholder="Username" #userName required>
-                </div>
-                <div class="formGroup">
-                    <input type="password" class="formControl" placeholder="Password" #userPassword required>
-                </div>
-                <div class="formGroup">
-                    <input type="button" class="btn btnPrimary" value="Log in"
-                        (click)="authService.SignIn(userName.value, userPassword.value)">
-                </div>
-                <div class="formGroup">
-                    <span class="or"><span class="orInner">Or</span></span>
-                </div>
-                <div class="formGroup">
-                    <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
-                        <i class="fab fa-google-plus-g"></i>
-                        Log in with Google
-                    </button>
-                </div>
-            </div>
-            <div class="redirectToLogin">
-                <span>Don't have an account?<span class="redirect" routerLink="/register-user"> Sign Up</span></span>
-            </div>
-        </div>
-    </div>
-</body>
-
-</html>
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="sign-in.component.css" rel="stylesheet" type="text/css" />
     <title>Login</title>
 
@@ -66,7 +23,7 @@
 <body>
     <div class="authBlock">
         <header>
-            <h1 style="color: #ffffff; padding: 5px; margin-top: 20px;">LOGIN PAGE</h1>
+            <h1 style="color: #000000; padding: 5px; margin-top: 20px;">LOGIN PAGE</h1>
         </header>
         <div class="box">
             <div class="boxAfter">
@@ -75,13 +32,14 @@
                     <br /><br /><br />
                     <div class="form-group row">
                         <div class="col-sm-12">
-                            <input type="text" class="form-control" name="id" id="inputEmail3" placeholder="Username" />
+                            <input type="text" class="form-control" name="id" id="inputEmail3" placeholder="Username"
+                                #userName required />
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-12">
                             <input type="password" class="form-control" name="pass" id="inputPassword3"
-                                placeholder="Password" />
+                                placeholder="Password" #userPassword required />
                         </div>
                     </div>
                     <br /><br />
@@ -115,4 +73,4 @@
     </div>
 </body>
 
-</html> -->
+</html>
