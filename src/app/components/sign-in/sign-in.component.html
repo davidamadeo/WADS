@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="displayTable">
+        <div class="displayTableCell">
+            <div class="authBlock">
+                <h3>Sign In</h3>
+                <div class="formGroup">
+                    <input type="text" class="formControl" placeholder="Username" #userName required>
+                </div>
+                <div class="formGroup">
+                    <input type="password" class="formControl" placeholder="Password" #userPassword required>
+                </div>
+                <div class="formGroup">
+                    <input type="button" class="btn btnPrimary" value="Log in"
+                        (click)="authService.SignIn(userName.value, userPassword.value)">
+                </div>
+                <div class="formGroup">
+                    <span class="or"><span class="orInner">Or</span></span>
+                </div>
+                <div class="formGroup">
+                    <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
+                        <i class="fab fa-google-plus-g"></i>
+                        Log in with Google
+                    </button>
+                </div>
+            </div>
+            <div class="redirectToLogin">
+                <span>Don't have an account?<span class="redirect" routerLink="/register-user"> Sign Up</span></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="sign-in.component.css" rel="stylesheet" type="text/css" />
+    <title>Login</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="authBlock">
+        <header>
+            <h1 style="color: #ffffff; padding: 5px; margin-top: 20px;">LOGIN PAGE</h1>
+        </header>
+        <div class="box">
+            <div class="boxAfter">
+                <form action="registerExperience.html">
+                    <h1>Sign In</h1>
+                    <br /><br /><br />
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" name="id" id="inputEmail3" placeholder="Username" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <input type="password" class="form-control" name="pass" id="inputPassword3"
+                                placeholder="Password" />
+                        </div>
+                    </div>
+                    <br /><br />
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <button type="submit"
+                                style="width: 100%; background-color: #242625; border-color:#242625; font-weight: bold; margin-top: -80px;"
+                                class="btn btn-primary"
+                                (click)="authService.SignIn(userName.value, userPassword.value)">
+                                Sign in
+                            </button>
+                        </div>
+                        <div class="col-sm-12">
+                            <button type="button" class="btn googleBtn"
+                                style="width: 100%; background-color: #ea4335; font-weight: bold; color: #ffffff; margin-top: -50px;"
+                                (click)="authService.GoogleAuth()">
+                                <i class="fab fa-google-plus-g"></i>
+                                Log in with Google
+                            </button>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="redirectToLogin">
+                                <span>Don't have an account?<span class="redirect" routerLink="/register-user"> Sign
+                                        Up</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html> -->
