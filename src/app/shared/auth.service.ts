@@ -49,9 +49,9 @@ export class AuthService {
     SignUp(email, password) {
         return this.afAuth.auth.createUserWithEmailAndPassword(email, password)
             .then((result) => {
-                /* Call the SendVerificaitonMail() function when new user sign 
-                up and returns promise */
-                this.SendVerificationMail();
+                this.ngZone.run(() => {
+                    this.router.navigate(['dashboard']);
+                });
                 this.SetUserData(result.user);
             }).catch((error) => {
                 window.alert(error.message)
